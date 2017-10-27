@@ -1,6 +1,8 @@
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin=require('html-webpack-plugin');
+const OfflinePlugin=require('offline-plugin');
 const path = require('path');
 
 let pathsToClean = __dirname + '/dist';
@@ -9,7 +11,7 @@ const config = {
     entry: './src/app.js',
     output: {
         path: __dirname + '/dist',
-        filename: 'js/app.bundle.js'
+        filename: 'app.[hash].bundle.js'
     },
     module: {
         rules: [
@@ -28,11 +30,14 @@ const config = {
     },
     plugins: [
         new CleanWebpackPlugin(pathsToClean),
+        new HtmlWebpackPlugin({
+            template:'./public/index.html'
+        }),
         new CopyWebpackPlugin([
             {from:'./public'}
         ]),
-        new webpack.optimize.UglifyJsPlugin()
-
+        new webpack.optimize.UglifyJsPlugin(),
+        new OfflinePlugin()
     ]
 }
 

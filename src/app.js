@@ -1,4 +1,5 @@
 import 'rxjs';
+import * as OfflinePluginRuntime from 'offline-plugin/runtime';
 
 import {paintStars,paintScore,paintGameOver,paintWelcome} from './canvas';
 import  store from './store';
@@ -7,6 +8,8 @@ import {titleTheme} from './sounds';
 import {paintSpaceShip,paintHeroShots,paintEnemies} from './constants/helpers';
 
 // store.dispatch({type:'START_APP'})
+
+OfflinePluginRuntime.install();
 titleTheme.play();
 
 store.subscribe(()=>{
