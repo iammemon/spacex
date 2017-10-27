@@ -1,0 +1,9 @@
+export const START_APP='START_APP';
+export const MOVE_STARS='MOVE_STARS';
+export const SPACESHIP_MOVE='SPACESHIP_MOVE';
+export const SPACESHIP_FIRE='SPACESHIP_FIRE';
+export const CREATE_ENEMY='CREATE_ENEMY';
+export const MOVE_ENEMIES='MOVE_ENEMIES';
+export const ENEMIES_FIRING='ENEMIES_FIRING';
+export const GAME_OVER='GAME_OVER';
+export const SCORE_UPDATE='SCORE_UPDATE';

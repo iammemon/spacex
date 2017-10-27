@@ -1,0 +1,30 @@
+{
+  "name": "spacex",
+  "version": "1.0.0",
+  "main": "app.js",
+  "author": "Fawad",
+  "license": "MIT",
+  "homepage": "https://iammemon.github.io/spacex",
+  "scripts": {
+    "start": "http-server -c-1 dist",
+    "build": "webpack -p",
+    "deploy": "yarn run build && gh-pages -d dist"
+  },
+  "dependencies": {
+    "howler": "^2.0.5",
+    "redux": "^3.7.2",
+    "redux-observable": "^0.16.0",
+    "rxjs": "^5.5.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "copy-webpack-plugin": "^4.2.0",
+    "gh-pages": "^1.0.0",
+    "http-server": "^0.10.0",
+    "webpack": "^3.8.1"
+  }
+}
