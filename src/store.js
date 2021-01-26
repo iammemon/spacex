@@ -8,7 +8,7 @@ export default createStore(
     reducers,
     compose(
         applyMiddleware(rootEpic),
-        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()    
+        // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()    
     )
 )
 
